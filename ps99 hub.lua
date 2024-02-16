@@ -41,21 +41,35 @@ local Window = OrionLib:MakeWindow({Name = "Best of ps99", HidePremium = false, 
         Zap:AddButton({
             Name = "launch",
             Callback = function()
-                OrionLib:MakeNotification({
-                    Name = "credits",
-                    Content = "All credits go to redZ team",
-                    Image = "rbxassetid://4483345998",
-                    Time = 5
-                })
                 OrionLib:Destroy()
                 loadstring(game:HttpGet('https://zaphub.xyz/Exec'))()
                 wait(1)
             end    
         })
+    
+    local lenut = Window:MakeTab({
+        Name = "LENUT hub",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
 
+        lenut:AddButton({
+            Name = "launch",
+            Callback = function()
+                OrionLib:MakeNotification({
+                    Name = "credits",
+                    Content = "All credits go to LENUT team",
+                    Image = "rbxassetid://4483345998",
+                    Time = 5
+                })
+                OrionLib:Destroy()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/lenutjr/lenut/main/scripts"))()
+                wait(1)
+            end    
+        })
+        
     
     
 end
 OrionLib:Destroy()
-
 
