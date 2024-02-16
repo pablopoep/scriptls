@@ -69,7 +69,5 @@ local Window = OrionLib:MakeWindow({Name = "Best of ps99", HidePremium = false, 
         })
         
     
-    
+OrionLib:Init()  
 end
-OrionLib:Destroy()
-
